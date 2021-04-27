@@ -4,6 +4,7 @@
 
 .fire {
 	background-color: #fd7d24;
+	color: white;
 }
 
 .grass {
@@ -16,6 +17,7 @@
 
 .water, .ice {
 	background-color: #4592c4;
+	color: white;
 }
 
 .ground {
@@ -32,6 +34,7 @@
 
 .poison {
 	background-color: #5E2D6C;
+	color: white;
 }
 
 .bug {
@@ -52,6 +55,7 @@
 
 .fighting {
 	background-color: #d56723;
+	color: white;
 }
 
 .normal {

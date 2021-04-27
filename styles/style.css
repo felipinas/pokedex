@@ -48,13 +48,20 @@ header input {
     color: rgba(255, 255, 255, 0.5);
 }
 
-/*HEADER ==========*/
+/*MAIN ==========*/
 
 main {
-    margin-top: -48px;
+    margin: -48px 0 24px 0;
 
     display: flex;
     justify-content: center;
+}
+
+.pokemons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    gap: 22px;
 }
 
 .pokemon {
@@ -75,14 +82,19 @@ main {
     width: 200px;
 }
 .pokemon span {
-    margin: 8px 0;
+    margin: 18px 0 8px 0;
     color: #929292;
+
+    font-weight: 700;
 }
 .pokemon h1 {
     margin-bottom: 20px;
 
     color: #232323;
     font-size: 2.3rem;
+}
+.pokemon h1::first-letter {
+    text-transform: capitalize;
 }
 .pokemon .types {
     display: flex;
@@ -93,4 +105,42 @@ main {
     border-radius: 20px;
 
     margin: 0px 4px;
+}
+.pokemon .types p::first-letter {
+    text-transform: capitalize;
+}
+
+/*FOOTER ==========*/
+
+footer {
+    width: 100%;
+    padding: 10px 0;
+
+    text-align: center;
+
+    background: #b8b8b8;
+    color: #232323;
+}
+footer p {
+    opacity: 0.6;
+    font-weight: 400;
+}
+footer span {
+    font-weight: 700;
+}
+footer span:hover {
+    color: white;
+}
+footer a {
+    color: #232323;
+    font-weight: 700;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+.invisible {
+    display: none !important;
 }

@@ -1,0 +1,11 @@
+@media screen and (max-width: 605px) {
+    .pokemons {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (min-width: 605px) and (max-width: 900px)  {
+    .pokemons {
+        grid-template-columns: 1fr 1fr;
+    }
+}
