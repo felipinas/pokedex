@@ -10,7 +10,9 @@ const fetchPokemons = async () => {
         try {
             const pokemon = await fetch(url)
             const pokemonJson = await pokemon.json()
-            allPokemons.push(pokemonJson)
+            const { id, name , types } = pokemonJson
+            
+            putPokemons(id, name, types)
         } catch (error) {
             console.log(error)
         }
@@ -20,22 +22,17 @@ const fetchPokemons = async () => {
     return allPokemons;
 };
 
-const putPokemons = async () => {
-    
-    const pokemonsList = await fetchPokemons();
+const putPokemons = async (id, name, types) => {
+    console.log(id);
     let typesDivs = "";
 
-    for (pokemon of pokemonsList) {
-
-        const { id, name, types } = pokemon;
-
-        for (eachType of types) {
-            typesDivs += `<div class="${eachType.type.name}">
-                        <p>${eachType.type.name}</p>                      
-                      </div>`
-        };
+    for (eachType of types) {
+        typesDivs += `<div class="${eachType.type.name}">
+                    <p>${eachType.type.name}</p>                      
+                    </div>`
+    };
     
-        pokemonsDiv.innerHTML +=
+    pokemonsDiv.innerHTML +=
         `<div class="pokemon">
             <img src="https://pokeres.bastionbot.org/images/pokemon/${id}.png" alt="A ${name} image">
             <span>Nº ${id}</span>
@@ -44,10 +41,6 @@ const putPokemons = async () => {
                 ${typesDivs}
             </div>
         </div>`;
-
-        typesDivs = "";
-    };
-
 };
 
-putPokemons();
+fetchPokemons();
