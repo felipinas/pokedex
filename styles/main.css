@@ -7,6 +7,10 @@
 }
 
 body {
+    min-height: 100vh;
+    
     background: #eeeeee;
     font-family: "Roboto";
+
+    position: relative;
 }

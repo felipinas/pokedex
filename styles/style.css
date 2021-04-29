@@ -51,7 +51,8 @@ header input {
 /*MAIN ==========*/
 
 main {
-    margin: -48px 0 24px 0;
+    margin-top: -48px;
+    padding-bottom: 70px;
 
     display: flex;
     justify-content: center;
@@ -77,6 +78,11 @@ main {
     border-radius: 20px;
 
     padding: 32px 0px;
+
+    transition: 0.5s;
+}
+.pokemon:hover {
+    transform: scale(1.05);
 }
 .pokemon img {
     width: 200px;
@@ -114,12 +120,17 @@ main {
 
 footer {
     width: 100%;
+
     padding: 10px 0;
+    margin-top: 10px;
 
     text-align: center;
 
     background: #b8b8b8;
     color: #232323;
+
+    position: absolute;
+    bottom: 0;
 }
 footer p {
     opacity: 0.6;
